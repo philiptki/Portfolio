@@ -18,13 +18,33 @@
         .content {
             flex: 1;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
+            position: relative;
         }
-        embed {
+        iframe {
             width: 80%;
-            height: 85vh;
+            height: 80vh;
+            border: none;
+        }
+        .download-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10px; /* Adjust the spacing from the bottom */
+        }
+        .download-button:hover {
+            background-color: #0056b3;
         }
         footer {
             color: white;
@@ -43,7 +63,8 @@
 </head>
 <body>
 <div class="content">
-    <embed src="resume.pdf" type="application/pdf">
+    <iframe src="resume.pdf" width="80%" height="780px"></iframe>
+    <a href="resume.pdf" download class="download-button">Download PDF</a>
 </div>
 
 <!-- Footer info -->
