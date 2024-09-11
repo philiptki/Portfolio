@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <style>
+      body {
+          margin: 0;
+          background-color: black;
+          color: white;
+          font-family: 'Share Tech Mono', monospace;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 100vh;
+      }
+      h1 {
+          text-align: center;
+          margin-top: 120px;
+      }
+      #user-data {
+          text-align: center;
+          margin-top: 20px;
+      }
+      #avatar {
+          border-radius: 50%;
+          width: 200px;
+          height: 200px;
+          margin-top: 20px;
+          animation: glow 1.5s infinite alternate; /* Add animation for the glowing ring */
+      }
+      #name {
+          margin-top: 50px; /* Add space between the image and the name */
+      }
+      footer {
+          color: white;
+          text-align: center;
+          padding: 10px 20px;
+          font-size: .9em;
+      }
+      footer a {
+          color: #00c6ff;
+          text-decoration: none;
+      }
+      footer a:hover {
+          text-decoration: underline;
+      }
+      @keyframes glow {
+          0% {
+              box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+              0 0 20px rgba(255, 255, 255, 0.4),
+              0 0 30px rgba(255, 255, 255, 0.3);
+          }
+          100% {
+              box-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+              0 0 40px rgba(255, 255, 255, 0.6),
+              0 0 60px rgba(255, 255, 255, 0.4);
+          }
+      }
+    </style>
+</head>
+<body>
+<main>
+    <h1>About</h1>
+    <div id="user-data">
+        <img id="avatar" src="" alt="Profile Picture">
+        <p id="name"></p>
+        <p id="bio"></p>
+        <p>About: </p>
+    </div>
+
+    <script>
+        fetch('https://api.github.com/users/philiptki')
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                // Select the HTML elements
+                const nameElement = document.getElementById('name');
+                const bioElement = document.getElementById('bio');
+                const avatarElement = document.getElementById('avatar');
+
+                // Populate with fetched data
+                nameElement.textContent = `name: ${data.name}`;
+                bioElement.textContent = `bio: ${data.bio}`;
+                avatarElement.src = `${data.avatar_url}`;
+            })
+            .catch(error => console.log(error));
+    </script>
+</main>
+
+
+<!-- Footer info -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024. All Rights Reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="https://www.linkedin.com/in/philip-thakuri/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/philtki" target="_blank">GitHub</a>
+        </p>
+    </div>
+</footer>
+</body>
+</html>

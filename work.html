@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Share Tech Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .project {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #444;
+            background-color: #222;
+            border-radius: 8px;
+        }
+
+        .project h2 {
+            margin-top: 0;
+        }
+
+        .project p {
+            margin-bottom: 5px;
+        }
+
+        .project a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-size: .9em;
+        }
+
+        footer a {
+            color: #00c6ff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>My Projects</h1>
+
+    <div class="project">
+        <h2>Project 1: Social Media Twitter API</h2>
+        <p>Description: Designed and implemented a RESTful API using Spring Boot, JPA, and PostgreSQL to manage social
+            media interactions similar to Twitter. Created endpoints for user management, tweet operations, hashtag
+            tracking, and user interactions (following, liking, replying). Developed comprehensive database schema
+            and integrated functionality for handling requests, validation, and data transformations.
+            The project included setting up an automated testing suite with Postman's Newman CLI to ensure
+            robust performance and adherence to specifications</p>
+        <p>Technologies Used: Java, SpringBoot, JPA, PostgreSQl, PGAdmin, Postman, Git, Maven, IntelliJ, Slack</p>
+        <a href="https://github.com/philiptki/Social-Media-Twitter-API" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+        <h2>Project 2: RESTful Quiz API</h2>
+        <p>Description: Developed a RESTful Quiz API with CRUD functionality for quizzes, questions, and answers.
+            The API includes endpoints to create, modify, delete, and retrieve quiz data, leveraging JPA annotations
+            for entity relationships and data transfer objects (DTOs) to ensure efficient JSON serialization.
+            Key features include quiz renaming, random question retrieval, and question management within quizzes.</p>
+        <p>Technologies Used: Java, SpringBoot, JPA, PostgreSQl, PGAdmin, Postman, Git, Maven, IntelliJ</p>
+        <a href="https://github.com/philiptki/Quiz-API" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+        <h2>Project 3: Employee-Manager Hierarchy DS</h2>
+        <p>Description: Developed a hierarchical data structure to organize employees and managers,
+            establishing clear reporting relationships. Utilized data structures such as sets and
+            maps to efficiently store and manage the hierarchy, ensuring optimized retrieval and
+            manipulation of employee-manager associations</p>
+        <p>Technologies Used: Java, Git, Intellij</p>
+        <a href="https://github.com/philiptki/Collections" target="_blank">View Project</a>
+    </div>
+</main>
+
+<!-- Footer info -->
+<footer>
+    <div class="footer-content">
+        <p>© 2024. All Rights Reserved.</p>
+        <p>
+            <a href="index.html">Home</a> |
+            <a href="https://www.linkedin.com/in/philip-thakuri/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/philtki" target="_blank">GitHub</a>
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
