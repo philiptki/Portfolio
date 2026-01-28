@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Work</title>
+    <title>My Work</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
     <style>
         html, body {
             height: 100%;
             margin: 0;
             padding: 0;
         }
+
         body {
             background-color: black;
             color: white;
@@ -17,46 +22,91 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         main {
             flex: 1;
             padding: 20px;
+            max-width: 1100px;
+            margin: auto;
         }
 
         h1 {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .project {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #444;
-            background-color: #222;
-            border-radius: 8px;
+        .section-title {
+            margin: 40px 0 20px;
+            text-align: center;
+            color: #00c6ff;
         }
 
-        .project h2 {
+        /* Project Cards */
+        .project-card {
+            background-color: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .featured-card {
+            border: 1px solid #00c6ff;
+        }
+
+        .project-card h3 {
             margin-top: 0;
         }
 
-        .project p {
-            margin-bottom: 5px;
+        .subtitle {
+            color: #aaa;
+            margin-bottom: 10px;
         }
 
-        .project a {
+        .project-card ul {
+            padding-left: 18px;
+            margin-top: 10px;
+        }
+
+        .project-card li {
+            margin-bottom: 6px;
+        }
+
+        .tags {
+            margin: 12px 0;
+        }
+
+        .tags span {
+            display: inline-block;
+            background: #333;
+            color: #00c6ff;
+            padding: 4px 8px;
+            margin: 3px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+
+        .project-card a {
             color: #00c6ff;
             text-decoration: none;
+            font-weight: bold;
         }
 
-        .project a:hover {
+        .project-card a:hover {
             text-decoration: underline;
         }
 
+        /* Grid for smaller projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
         footer {
-            color: white;
             text-align: center;
-            padding: 10px 20px;
-            font-size: .9em;
+            padding: 15px;
+            font-size: 0.9em;
         }
 
         footer a {
@@ -69,101 +119,170 @@
         }
     </style>
 </head>
+
 <body>
+
 <main>
-    <h1>My Projects </h1>
+    <h1>My Work</h1>
 
-    <div class="project">
-        <h2>Project 1: Team Management App</h2>
-        <p>Description: Developed a full-stack work organization management application, allowing users to post
-            announcements, manage teams, projects and users within their organization, complete with back-end
-            documentation. Created sixteen RESTful API endpoints for users, teams, companies, and announcements by
-            implementing controllers, DTOs, and services for the server-side back-end. Implemented an interactive
-            front-end user interface with diverse functionality, featuring a role-based login page, an employee
-            directory, a homepage and additional sections for user navigation. Integrated functionality to bridge the
-            back-end and front-end, featuring secure user login with a Spring Boot credentials system for authorized
-            access to organizational data.</p>
-        <p>Technologies Used: Java, Spring Boot, Typescript, Angular, PostgreSQL, Postman, Maven, Node.js, Figma</p>
-        <a href="https://github.com/philiptki/Team-Management-App" target="_blank">View Project</a>
-    </div>
+    <!-- Featured Projects -->
+    <section>
+        <h2 class="section-title">Featured Projects</h2>
 
-    <div class="project">
-        <h2>Project 2: Song Guessing Web game</h2>
-        <p>Description: Created an engaging and challenging web application using Spotify’s Web API to create a dynamic
-            song guessing game, using Angular for the interactive front-end user experience. Designed and developed a
-            Figma WireFrame for the UI and streamline page navigation for the web application. Built a dynamic and
-            randomized game mechanics to provide a more challenging and immersive user experience. Integrated a point
-            system that enables users to track scores and compete on a leaderboard stored in local storage.</p>
-        <p>Technologies Used: JavaScript, Typescript, Angular, Spotify Web API, Node.js, Figma, Git, GitHub</p>
-        <a href="https://github.com/philiptki/Spotify-API-web-game" target="_blank">View Project</a>
-    </div>
+        <div class="project-card featured-card">
+            <h3>LessonPlan</h3>
+            <p class="subtitle">Helps educators turn raw curriculum and PDFs into structured, classroom-ready lesson plans</p>
 
-    <div class="project">
-        <h2>Project 3: Android Chat App</h2>
-        <p>Description: Developed a full-stack Android application that enables people to connect and communicate
-            seamlessly through real-time messaging functionality. Collaborated efficiently with team of five using agile
-            methodology including daily scrums, sprints and user stories. Designed and implemented a dynamic homepage
-            with extensive features, enhancing the user interface, and improving the overall user experience of the
-            application. Integrated real-time JSON data from a weather API and transformed it into a RESTful API.</p>
-        <p>Technologies Used: Java, SpringBoot, JPA, PostgreSQl, PGAdmin, Postman, Git, Maven, IntelliJ, Slack</p>
-        <a href="https://github.com/ProfessorX0537/Team-2-TCSS-450" target="_blank">View Project</a>
-    </div>
+            <ul>
+<!--                <li>Developed an AI-driven lesson planning tool using Google Gemini and React</li>-->
+<!--                <li>Implemented a multi-modal data pipeline to process large PDFs and text inputs asynchronously</li>-->
+<!--                <li>Designed a modern responsive educator-focused interface with custom Markdown rendering outputs</li>-->
+                <li>Converted curriculum data and PDFs into structured lesson plans using AI</li>
+                <li>Processed large PDF and text inputs through an asynchronous frontend pipeline</li>
+                <li>Built a modern educator-focused interface with Tailwind CSS and Markdown output</li>
+            </ul>
 
-    <div class="project">
-        <h2>Project 4: Social Media Twitter API</h2>
-        <p>Description: Designed and implemented a RESTful API using Spring Boot, JPA, and PostgreSQL to manage social
-            media interactions similar to Twitter. Created endpoints for user management, tweet operations, hashtag
-            tracking, and user interactions (following, liking, replying). Developed comprehensive database schema
-            and integrated functionality for handling requests, validation, and data transformations.
-            The project included setting up an automated testing suite with Postman's Newman CLI to ensure
-            robust performance and adherence to specifications.</p>
-        <p>Technologies Used: Java, SpringBoot, JPA, PostgreSQl, PGAdmin, Postman, Git, Maven, IntelliJ, Slack</p>
-        <a href="https://github.com/philiptki/Social-Media-Twitter-API" target="_blank">View Project</a>
-    </div>
+            <div class="tags">
+                <span>React</span>
+                <span>TypeScript</span>
+                <span>Tailwind CSS</span>
+                <span>Google Cloud Platform</span>
+                <span>Google Gemini SDK</span>
+            </div>
 
-    <div class="project">
-        <h2>Project 5: RESTful Quiz API</h2>
-        <p>Description: Developed a RESTful Quiz API with CRUD functionality for quizzes, questions, and answers.
-            The API includes endpoints to create, modify, delete, and retrieve quiz data, leveraging JPA annotations
-            for entity relationships and data transfer objects (DTOs) to ensure efficient JSON serialization.
-            Key features include quiz renaming, random question retrieval, and question management within quizzes.</p>
-        <p>Technologies Used: Java, SpringBoot, JPA, PostgreSQl, PGAdmin, Postman, Git, Maven, IntelliJ</p>
-        <a href="https://github.com/philiptki/Quiz-API" target="_blank">View Project</a>
-    </div>
+            <a href="https://lessonplan-v2-986570227913.us-west1.run.app/" target="_blank">
+                Vist Site →
+            </a>
+        </div>
 
-    <div class="project">
-        <h2>Project 6: Simulation Web game</h2>
-        <p>Description: Led an agile team of three in developing a web-based game application and game engine from
-            scratch, enabling users to immerse themselves in a 2D puzzle gaming experience. Created the UI for the
-            webpage and game, handled level design, created and implemented game structures. Engineered the collision
-            physics engine, implemented environmental mechanics and game logic.</p>
-        <p>Technologies Used: Java, MVC, Swing, SQlite, IntelliJ, Git</p>
-        <a href="https://github.com/philtki/Lavaboy-and-Icegirl" target="_blank">View Project</a>
-    </div>
+        <div class="project-card featured-card">
+            <h3>Serene Hearts AFH</h3>
+            <p class="subtitle">Small business website showcasing services and amenities of an adult family home</p>
 
-    <div class="project">
-        <h2>Project 7: Adventure Maze Game</h2>
-        <p>Description: Contributed to the development of a 2D random maze generation game application with an agile
-            team of three. Utilizing the MVC design pattern, implemented the components, mechanics, and logic of game
-            items. Developed the GUI that serves as the main focal point for gameplay, incorporating music, menu
-            selection and more. Applied fundamentals of software engineering through agile methodologies,
-            crafted SRS documents, and SCRUM.</p>
-        <p>Technologies Used: Java, MVC, Swing, SQlite, IntelliJ, Git</p>
-        <a href="https://github.com/ttukei/Dungeon-Adventure" target="_blank">View Project</a>
-    </div>
+            <ul>
+                <li>Designed and developed a responsive website highlighting services, contact, and amenities</li>
+                <li>Enhanced website usability and accessibility for desktop and mobile users</li>
+            </ul>
 
+            <div class="tags">
+                <span>Typescript</span>
+                <span>JavaScript</span>
+                <span>HTML/CSS</span>
+            </div>
+
+            <a href="https://philiptki.github.io/Serene-Hearts-AFH/" target="_blank">
+                Visit Site →
+            </a>
+        </div>
+
+
+        <div class="project-card featured-card">
+            <h3>Team Management App</h3>
+            <p class="subtitle">Full-stack enterprise work organization management platform</p>
+
+            <ul>
+                <li>Developed 16 RESTful API endpoints for users, teams, companies, and announcements</li>
+                <li>Implemented secure role-based authentication using Spring Boot</li>
+                <li>Built Angular UI with employee directory, dashboards, and navigation</li>
+            </ul>
+
+            <div class="tags">
+                <span>Java</span>
+                <span>Spring Boot</span>
+                <span>Angular</span>
+                <span>PostgreSQL</span>
+                <span>TypeScript</span>
+                <span>Postman</span>
+            </div>
+
+            <a href="https://github.com/philiptki/Team-Management-App" target="_blank">
+                View on GitHub →
+            </a>
+        </div>
+
+        <div class="project-card featured-card">
+            <h3>Song Guessing Web Game</h3>
+            <p class="subtitle">Interactive music guessing game using Spotify API</p>
+
+            <ul>
+                <li>Integrated Spotify Web API for dynamic song data</li>
+                <li>Designed UI/UX wireframes and navigation using Figma</li>
+                <li>Implemented scoring system and local leaderboard</li>
+            </ul>
+
+            <div class="tags">
+                <span>Angular</span>
+                <span>TypeScript</span>
+                <span>Spotify API</span>
+                <span>Node.js</span>
+            </div>
+
+            <a href="https://github.com/philiptki/Spotify-API-web-game" target="_blank">
+                View on GitHub →
+            </a>
+        </div>
+    </section>
+
+    <!-- Other Projects -->
+    <section>
+        <h2 class="section-title">Other Projects</h2>
+
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Android Chat App</h3>
+                <p>Real-time messaging app built with agile methodology and RESTful services.</p>
+                <div class="tags">
+                    <span>Java</span><span>Android Studio</span><span>Node.js</span>
+                </div>
+                <a href="https://github.com/ProfessorX0537/Team-2-TCSS-450" target="_blank">GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Social Media Twitter API</h3>
+                <p>RESTful API for managing users, tweets, hashtags, and interactions.</p>
+                <div class="tags">
+                    <span>Java</span><span>JPA</span><span>PostgreSQL</span>
+                </div>
+                <a href="https://github.com/philiptki/Social-Media-Twitter-API" target="_blank">GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>RESTful Quiz API</h3>
+                <p>CRUD-based quiz system with DTOs and randomized question retrieval.</p>
+                <div class="tags">
+                    <span>Java</span><span>Spring Boot</span><span>JPA</span>
+                </div>
+                <a href="https://github.com/philiptki/Quiz-API" target="_blank">GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Simulation Web Game</h3>
+                <p>2D puzzle game with custom collision physics and level design.</p>
+                <div class="tags">
+                    <span>JavaScript</span><span>MVC</span><span>Java Swing</span>
+                </div>
+                <a href="https://github.com/philtki/Lavaboy-and-Icegirl" target="_blank">GitHub →</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Adventure Maze Game</h3>
+                <p>Random maze game featuring music, menus, and a GUI.</p>
+                <div class="tags">
+                    <span>Java</span><span>SQLite</span><span>MVC</span><span>Swing</span>
+                </div>
+                <a href="https://github.com/ttukei/Dungeon-Adventure" target="_blank">GitHub →</a>
+            </div>
+        </div>
+    </section>
 </main>
 
-<!-- Footer info -->
 <footer>
-    <div class="footer-content">
-        <p>© 2024. All Rights Reserved.</p>
-        <p>
-            <a href="index.html">Home</a> |
-            <a href="https://www.linkedin.com/in/philip-thakuri/" target="_blank">LinkedIn</a> |
-            <a href="https://github.com/philtki" target="_blank">GitHub</a>
-        </p>
-    </div>
+    <p>© 2026. All Rights Reserved.</p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="https://www.linkedin.com/in/philip-thakuri/" target="_blank">LinkedIn</a> |
+        <a href="https://github.com/philtki" target="_blank">GitHub</a>
+    </p>
 </footer>
 
 </body>
