@@ -31,7 +31,7 @@
       margin-top: 20px;
     }
     form {
-      max-width: 400px;
+      max-width: 650px;
       width: 100%;
       padding: 20px;
       background-color: #1b1b1b;
@@ -56,9 +56,12 @@
     input[type="submit"] {
       background-color: #00c6ff;
       cursor: pointer;
-      width: 100%;
+      width: 50%;        /* keeps it half the form width */
       font-size: 1.2em;
+      display: block;    /* make it a block element so margin works */
+      margin: 20px auto; /* top/bottom spacing + auto left/right centers it */
     }
+
     input[type="submit"]:hover {
       background-color: #00a4e0;
     }
